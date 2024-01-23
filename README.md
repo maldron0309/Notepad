@@ -1,3 +1,4 @@
 # Notepad
 
-특강 기간중 만든 메모장
+기능
+Open, Save, Exit, Font, Copy&Paste, Color
