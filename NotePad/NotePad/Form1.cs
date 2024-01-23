@@ -23,11 +23,21 @@ namespace NotePad
         {
         }
 
+        /// <summary>
+        /// 새로운 파일 생성
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void NewTab_Click(object sender, EventArgs e)
         {
             text.Clear();
         }
 
+        /// <summary>
+        /// 파일 열기
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void OpenTab_Click(object sender, EventArgs e)
         {
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
@@ -36,12 +46,17 @@ namespace NotePad
             }
         }
 
+        /// <summary>
+        /// 저장
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Save_Click(object sender, EventArgs e)
         {
             SaveFileDialog saveFileDialog = new SaveFileDialog();
 
             saveFileDialog.DefaultExt = ".txt";
-            saveFileDialog.Filter = "Text File|*.txt";
+            saveFileDialog.Filter = "Text File|*.txt"; // .txt 파일만
 
             DialogResult dr = saveFileDialog.ShowDialog();
             if (dr == DialogResult.OK)
